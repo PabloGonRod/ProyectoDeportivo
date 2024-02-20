@@ -1,0 +1,16 @@
+<div style="text-align: center;">
+  <b>Mostrando {{partidos.length}}</b>
+</div>
+<br>
+
+<div class="col" *ngFor="let partido of partidos">
+  <div class="row">
+    <div class="col">
+      {{partido.fecha}}
+    </div>
+    <div class="col">
+      <a routerLink="partido/{{partido.id}}">{{partido.idLocal}} - {{partido.idVisitante}}</a>
+    </div>
+  </div>
+  <br>
+</div>
