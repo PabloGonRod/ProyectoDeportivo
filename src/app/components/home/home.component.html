@@ -1,22 +1,33 @@
-<app-header></app-header>
-<div class="row" style="margin-left: 40%;">
-  <h1>Datos deportivos</h1>
-</div>
-<div class="row" style="margin-left: 20%;">
-  <div class="col">
-    <img src="../../../assets/img/equipos.webp" alt="equipos" (click)="navigateToEquipos()">
+
+<header>
+  <app-header></app-header>
+  <br>
+  <img src="../../../assets/img/banner.webp" alt="banner" id="banner">
+</header>
+
+<body>
+  <div class="row" style="margin-left: 40%;">
+    <h1>Datos deportivos</h1>
   </div>
-  <div class="col">
-    <img src="../../../assets/img/partidos.jpg" alt="partidos" (click)="navigateToPartidos()">
+  <div class="row" style="margin-left: 20%;">
+    <div class="col">
+      <img src="../../../assets/img/equipos.webp" alt="equipos" id="circle" (click)="navigateToEquipos()">
+      <h4 style="margin-left: 10%;">Equipos</h4>
+    </div>
+    <div class="col">
+      <img src="../../../assets/img/partidos.jpg" alt="partidos" id="circle" (click)="navigateToPartidos()">
+      <h4 style="margin-left: 10%;">Partidos</h4>
+    </div>
+    <div class="col">
+      <img src="../../../assets/img/sucesos.png" alt="sucesos" id="circle" (click)="navigateToSucesos()">
+      <h4 style="margin-left: 10%;">Sucesos</h4>
+    </div>
   </div>
-  <div class="col">
-    <img src="../../../assets/img/sucesos.png" alt="sucesos" (click)="navigateToSucesos()">
-  </div>
-</div>
-<br>
-<div>
+</body>
+
+<footer>
   <app-footer></app-footer>
-</div>
+</footer>
 
 
 

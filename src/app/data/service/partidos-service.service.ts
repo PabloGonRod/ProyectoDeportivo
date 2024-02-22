@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Observable, filter, of } from 'rxjs';
 import { DATOS_DEPORTES, Partido } from '../mock/partidosData';
+import { EQUIPOS_MOCK, Equipo } from '../mock/equiposMock';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class DeportesServiceService {
+export class PartidosServiceService {
 
   constructor() { }
+
 
 
   getPartidos() : Observable<Partido[]>{
@@ -33,4 +35,17 @@ export class DeportesServiceService {
     return of(DATOS_DEPORTES);
   }
 
+  removePartido(id: number | undefined){
+    let indicePartido = DATOS_DEPORTES.findIndex(partido => partido.id === id);
+    if (indicePartido !== -1) {
+      DATOS_DEPORTES.splice(indicePartido, 1);
+    }
+  }
+
+  modificarPartido(id: number, partido: Partido){
+    let indicePartido = DATOS_DEPORTES.findIndex(p => p.id === partido.id);
+    if (indicePartido !== -1) {
+      DATOS_DEPORTES[indicePartido] = partido;
+    }
+  }
 }

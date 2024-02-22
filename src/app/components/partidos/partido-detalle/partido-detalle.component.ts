@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Partido, Gol, Tarjeta } from 'src/app/data/mock/partidosData';
-import { DeportesServiceService } from 'src/app/data/service/deportes-service.service';
+import { PartidosServiceService } from 'src/app/data/service/partidos-service.service';
 
 @Component({
   selector: 'app-partido-detalle',
@@ -23,7 +23,7 @@ export class PartidoDetalleComponent implements OnInit {
   tarjetaLocalColor: String | undefined
   tarjetaVisitanteColor: String | undefined
 
-  constructor(private service: DeportesServiceService, private router: Router, private activateRoute: ActivatedRoute){
+  constructor(private service: PartidosServiceService, private router: Router, private activateRoute: ActivatedRoute){
 
   }
 
@@ -50,6 +50,8 @@ export class PartidoDetalleComponent implements OnInit {
   navigateToList(){
     this.router.navigate(['partidos'])
   }
+
+
 
 
 }

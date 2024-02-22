@@ -1,6 +1,12 @@
 <h1>Nuevo Partido</h1>
 
-<input type="text" #idLocal placeholder="Equipo local" />
-<input type="text" #idVisitante placeholder="Equipo visitante" />
-<input type="date" #fecha/>
+Equipo Local: <input type="text" #idLocal placeholder="Equipo local" />
+<br>
+<br>
+Equipo Visitante: <input type="text" #idVisitante placeholder="Equipo visitante" />
+<br>
+<br>
+Fecha: <input type="date" #fecha/>
+<br>
+<br>
 <button class="btn btn-primary" (click)="addPartido(idLocal.value, idVisitante.value, fecha.value)" >Agregar partido</button>

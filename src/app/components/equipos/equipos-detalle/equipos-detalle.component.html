@@ -6,22 +6,17 @@
     </svg>
   </button>
 </div>
+<h1>{{equipoDet?.nombre}}</h1>
 
-<div class="row">
-  <div class="col">
-    <h2>{{idLocal}} {{golesLocal.length}}</h2>
-  </div>
-  <h2>VS</h2>
-  <div class="col">
-    <h2>{{golesVisitante.length}} {{idVisitante}}</h2>
-  </div>
-</div>
-<div class="row">
-  <div class="col">
-    <h4>Tarjetas: </h4>{{tarjetaLocal.length}}
-  </div>
-  <div class="col">
-    <h4>Tarjetas: </h4>{{tarjetaVisitante.length}}
+<div class="row" style="margin-left: 32%;" *ngFor="let partido of partidos">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{partido.idLocal}} - {{partido.idVisitante}}</h5>
+        <p class="card-text">{{partido.fecha}}</p>
+        <a routerLink="/partidos/partido/{{partido.id}}" class="btn btn-primary">Ver partido</a>
+      </div>
+    </div>
   </div>
 </div>
 

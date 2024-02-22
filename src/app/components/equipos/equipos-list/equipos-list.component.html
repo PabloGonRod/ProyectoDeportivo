@@ -1,0 +1,8 @@
+<h1>EQUIPOS</h1>
+<br>
+<br>
+<div class="row" *ngFor="let equipo of equipos">
+  <div class="col">
+    <a routerLink="equipo/{{equipo.id}}"><h4>{{equipo.nombre}}</h4></a>
+  </div>
+</div>

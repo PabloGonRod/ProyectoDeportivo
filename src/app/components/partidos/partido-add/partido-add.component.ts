@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Gol, Partido, Tarjeta } from 'src/app/data/mock/partidosData';
-import { DeportesServiceService } from 'src/app/data/service/deportes-service.service';
+import { PartidosServiceService } from 'src/app/data/service/partidos-service.service';
 
 @Component({
   selector: 'app-partido-add',
@@ -20,7 +20,7 @@ export class PartidoAddComponent {
   fecha: string = ''
 
 
-  constructor(private service: DeportesServiceService, private router: Router){}
+  constructor(private service: PartidosServiceService, private router: Router){}
 
   addPartido(idLocal: string, idVisitante: string, fecha: string){
     this.partido = {

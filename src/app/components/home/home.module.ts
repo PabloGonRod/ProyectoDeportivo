@@ -17,7 +17,9 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     AppRoutingModule
   ],
   exports: [
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class HomeModule { }

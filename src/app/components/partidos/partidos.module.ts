@@ -7,13 +7,16 @@ import { PartidoDetalleComponent } from './partido-detalle/partido-detalle.compo
 import { PartidoDetalleModule } from './partido-detalle/partido-detalle.module';
 import { PartidoAddComponent } from './partido-add/partido-add.component';
 import { PartidoAddModule } from './partido-add/partido-add.module';
+import { PartidoModComponent } from './partido-mod/partido-mod.component';
+import { PartidoModModule } from './partido-mod/partido-mod.module';
 
 const routes: Routes = [
   {path: '', component: PartidosListaComponent},
   {path: 'partido/:id', component: PartidoDetalleComponent,
   loadChildren:() => import('./partido-detalle/partido-detalle.module').then(m => m.PartidoDetalleModule)},
   {path: 'add', component: PartidoAddComponent,
-  loadChildren:() => import('./partido-add/partido-add.module').then(m => m.PartidoAddModule)}
+  loadChildren:() => import('./partido-add/partido-add.module').then(m => m.PartidoAddModule)},
+  {path: 'mod/:id', component: PartidoModComponent}
 ]
 
 
@@ -26,6 +29,7 @@ const routes: Routes = [
     CommonModule,
     PartidoDetalleModule,
     PartidoAddModule,
+    PartidoModModule,
     RouterModule.forChild(routes)
   ],
   exports: [
