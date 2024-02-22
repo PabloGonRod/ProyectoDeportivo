@@ -2,7 +2,7 @@
 
 <div class="card m-3">
   <div class="card-body">
-    <form [formGroup]="formularioPartido" (ngSubmit)="onSubmit()">
+    <form [formGroup]="formularioPartido">
       <b>Equipo Local: </b><input type="text" class="form-control" formControlName="idLocal" #idLocal placeholder="Equipo local" />
       <span *ngIf="formularioPartido.get('idLocal')?.errors?.['required']">
         <b style="color: red;">El equipo local no es valido</b>
@@ -15,7 +15,7 @@
       </span>
       <br>
       <br>
-      <b>Fecha: </b><input type="date" class="form-control" formControlName="fecha" #fecha/>
+      Fecha: <input type="date" class="form-control" formControlName="fecha" #fecha/>
       <span *ngIf="formularioPartido.get('fecha')?.errors?.['required']">
         <b style="color: red;">La fecha no es valida</b>
       </span>

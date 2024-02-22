@@ -14,8 +14,7 @@ const routes: Routes = [
   {path: '', component: PartidosListaComponent},
   {path: 'partido/:id', component: PartidoDetalleComponent,
   loadChildren:() => import('./partido-detalle/partido-detalle.module').then(m => m.PartidoDetalleModule)},
-  {path: 'add', component: PartidoAddComponent,
-  loadChildren:() => import('./partido-add/partido-add.module').then(m => m.PartidoAddModule)},
+  {path: 'add', component: PartidoAddComponent},
   {path: 'mod/:id', component: PartidoModComponent}
 ]
 

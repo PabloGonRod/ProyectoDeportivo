@@ -32,15 +32,7 @@ export class PartidoAddComponent implements OnInit {
     })
   }
 
-  onSubmit(){
-    if (this.formularioPartido.valid) {
-      // Procesar el formulario submit
-      alert(this.formularioPartido.value);
-    } else {
-      // Mostrar errores de validación
-      alert('Formulario no válido');
-    }
-  }
+
 
   addPartido(idLocal: string, idVisitante: string, fecha: string){
     this.partido = {
